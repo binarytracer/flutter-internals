@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       # Scans pubspec.lock against the OSV database; fails on known vulnerabilities.
       - uses: google/osv-scanner-action/osv-scanner-action@v2.6.0
@@ -35,7 +35,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       # Blocks PRs that introduce vulnerable dependencies.
       - uses: actions/dependency-review-action@v4
